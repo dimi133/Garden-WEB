@@ -21,7 +21,6 @@ export default function CategoryProductPage() {
     const category = categories.find(categories => categories.id === +id)
     const result = products.filter(product => product.categoryId === +id)
 
-    console.log(category.title)
   return (
     <Container>
         <h2>{category ? category.title : 'Not found'}</h2>
