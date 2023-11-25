@@ -1,0 +1,81 @@
+.item{
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px gray;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 300px auto 65px;
+    gap: 10px;
+    /* position: relative; */
+}
+
+.picture{
+    position: relative;
+}
+
+.item img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.mark{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discont_price{
+    color: #e74c3c;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.discontPerc{
+    color: #e28176;
+}
+
+.btn {
+    display: none;
+  }
+
+  .picture:hover .btn {
+    display: block;
+    border: 2px solid #339933;
+    border-radius: 21px;
+    background: #cae6ca;
+    color: #339933;
+    width: 279px;
+    height: 72px;
+    /* top: 575px;
+    left: 49px; */
+    position: absolute;
+    /* bottom: 100px;
+    left: 10px; */
+    top: 210px;
+    left: 10px;
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+
+  /* @media(max-width: 375px){
+    .picture .btn{
+        display: block;
+        border: 2px solid #339933;
+        border-radius: 21px;
+        background: #cae6ca;
+        color: #339933;
+        width: 180px;
+        height: 42px;
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+        cursor: pointer;
+    }
+  } */

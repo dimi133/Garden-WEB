@@ -1,0 +1,101 @@
+.item{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,340px);
+    /* justify-content: center; */
+    gap: 40px;
+    align-items: center;
+}
+
+.item p{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.priceFilter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discount{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.discount input{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -10000px;
+}
+
+.discount input+label{
+    border: 2px solid black;
+    width: 40px;
+    height: 40px;
+}
+.discount input+label .mark{
+    display: none;
+}
+
+.discount input:checked+label{
+    border: 2px solid #339933;
+    background-color: #339933;
+    width: 40px;
+    height: 40px;
+}
+
+.discount input:checked+label .mark{
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+}
+
+.sorted{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.item input{
+    border-radius: 7px;
+    padding-left: 7px;
+    height: 40px;
+}
+
+.item input[type="checkbox"]{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.select{
+    border-radius: 7px;
+    /* max-width: 219px; */
+    max-height: 40px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@media (max-width: 375px){
+    .item{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .priceFilter{
+        flex-direction: column;
+    }
+    .discount{
+        flex-direction: column;
+    }
+    .sorted{
+        flex-direction: column;
+    }
+}

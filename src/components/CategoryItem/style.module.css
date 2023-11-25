@@ -1,0 +1,23 @@
+.item{
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.pics{
+    width: 318px;
+    height: 350px;
+}
+
+.item img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.item p{
+    display: flex;
+    justify-content: center;
+}

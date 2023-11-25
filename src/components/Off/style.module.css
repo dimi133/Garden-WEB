@@ -1,0 +1,107 @@
+.off{
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+}
+
+.off img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.textOff{
+    color: white;
+    font-weight: 700;
+    width: 470px;
+}
+
+.p1{
+    font-size: 90px;
+}
+
+.p2{
+    font-size: 50px;
+}
+
+.textOff form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textOff form input{
+    border: 2px solid white;
+    border-radius: 25px;
+    max-width: 470px;
+    height: 75px;
+    font-size: x-large;
+    padding-left: 20px;
+}
+
+.textOff form button{
+    border: 2px solid white;
+    border-radius: 25px;
+    max-width: 470px;
+    height: 75px;
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+
+}
+
+@media(max-width: 900px){
+    .off{
+        grid-template-columns: 880px;
+        max-width: 880px;
+    }
+    .off img{
+        display: none;
+    }
+}
+
+@media(max-width: 500px){
+    .off{
+        grid-template-columns: 480px;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textOff form input{
+        max-width: 374px;
+        height: 40px;
+    }
+
+    .textOff form button{
+        width: 400px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 400px){
+    .off{
+        grid-template-columns: 350px;
+        max-width: 370px;
+    }
+
+    .p1, .p2{
+        font-size: 30px;
+    }
+
+    .textOff form{
+        justify-content: center;
+    }
+
+    .textOff form input{
+        width: 274px;
+        height: 40px;
+    }
+
+    .textOff form button{
+        width: 300px;
+        height: 40px;
+    }
+}
