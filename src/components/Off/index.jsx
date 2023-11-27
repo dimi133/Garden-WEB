@@ -55,8 +55,9 @@ export default function Off() {
     }
       const data = {
         phone: phone.value,
-      }.lenght !==0;
+      };
           fetchAdd(data);
+          console.log(data)
           notify(); 
       event.target.reset();
       }

@@ -70,8 +70,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: red; /* Цвет фона для счетчика */
-    color: white; /* Цвет текста счетчика */
+    background-color: red; 
+    color: white; 
     padding: 4px 8px;
     border-radius: 50%;
     font-size: 12px;
@@ -105,6 +105,9 @@
         right: 20px;
         top: 20px;
         z-index: 100;
+        background-color: #339933;
+        border-radius: 7px;
+        cursor: pointer;
     }
     .links.active{
         transform: translateY(0);

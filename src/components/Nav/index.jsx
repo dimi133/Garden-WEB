@@ -21,7 +21,6 @@ export default function Nav() {
       className={[s.links, active ? s.active : ''].join(' ')}
     >
       <div className={s.div1}>
-        {/* <img src="/media/image 1.png" alt="Logo" /> */}
         <NavLink to={''} className={s.mainLogo}>
           <img src="/media/image 1.png" alt="Logo" />
         </NavLink>

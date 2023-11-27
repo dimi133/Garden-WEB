@@ -30,14 +30,13 @@ export default function CategoryProductPage() {
         </Link>
         {category 
           ? <h2>{category.title} </h2>
-          : [<h2>'Not found'</h2>,
-          <img src="/media/oops.png" alt="OOPS"/>
+          : [<h2 key='not-found'>'Not found'</h2>,
+          <img key='oops' src="/media/oops.png" alt="OOPS"/>
       
       ]}
         
         <div className={s.item}>
             { 
-              
               result
                 .filter(({show}) => Object.values(show).every(elem => elem))
                 .map(item => <ProductItem key={item.id} {...item} />)
