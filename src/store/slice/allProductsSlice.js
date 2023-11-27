@@ -26,25 +26,16 @@ const allProductsSlice = createSlice({
                     ? elem.discont_price
                     : elem.price;
                 return{
-                //     ...elem, 
-                //     show: {
-                //         ...elem.show,
-                //         // price: elem.price >= payload.min && elem.price <= payload.max
-                //         price: elem.price >= payload.min && discountedPrice <= payload.max,
-                //         discounted: 
-                //             !payload.showDiscounted || (payload.showDiscounted && elem.discont_price)
-                //     }
-                // }
-                        ...elem,
-                show: {
-                    ...elem.show,
-                    price:
-                    discountedPrice >= payload.min && discountedPrice <= payload.max,
-                    discounted:
-                        !payload.showDiscounted ||
-                        (payload.showDiscounted && elem.discont_price),
-                },
-            };
+                    ...elem, 
+                    show: {
+                        ...elem.show,
+                        // price: elem.price >= payload.min && elem.price <= payload.max
+                        price: elem.price >= payload.min && discountedPrice <= payload.max,
+                        discounted: 
+                            !payload.showDiscounted || (payload.showDiscounted && elem.discont_price)
+                    }
+                }
+             
         });      
         },
         sale(state){

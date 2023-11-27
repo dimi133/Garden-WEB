@@ -81,7 +81,7 @@ const submit = (event) => {
     console.log(data)
         fetchAdd(data);
         notify();
-    // event.target.reset();
+    event.target.reset();
     }
 
   return (

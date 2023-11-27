@@ -9,7 +9,7 @@ import ScrollButton from '../ScrollButton';
 
 export default function ProductsList() {
 
-    const { status, list } = useSelector(({allProducts}) => allProducts);
+    const { list } = useSelector(({allProducts}) => allProducts);
     
   return (
     <Container>
@@ -19,22 +19,22 @@ export default function ProductsList() {
         /> 
       <ProductsFilters showCheckbox={true}/>
 
-        {
-            status === 'ready'
-            ? <div className={s.item}>
-            {
+     <div className={s.item}>
+            {list
+                  .filter(({show}) => Object.values(show).every(elem => elem))
+                  .length > 0 ? (
                 list
                   .filter(({show}) => Object.values(show).every(elem => elem))
                   .map(item => <ProductItem key={item.id} {...item} /> )
-            }
+            )   : (
+              <div className={s.notFound}>
+                <h2>Product not found</h2>
+                <img src="/media/oops.png" alt="OOPS" />
+              </div>
+            )}
             
-        </div>
-        : status === 'error'
-        ? <h2>Ошибка загрузки</h2>
-        : status === 'loading'
-        ? <h2>Данный загружаются</h2>
-        : ''
-        }
+      </div>
+
 
         <ScrollButton />
     </Container>

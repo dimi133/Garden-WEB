@@ -13,6 +13,7 @@ import Contact from "../Contact";
 import CategoryProductPage from "../pages/CategoryProductPage";
 import SingleProductPage from "../pages/SingleProductPage";
 import NotFound from "../NotFound";
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
 
       </Routes>
       <Contact />
-      
+      <ToastContainer />
     </>
   );
 }

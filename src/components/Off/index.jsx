@@ -57,8 +57,7 @@ export default function Off() {
         phone: phone.value,
       }.lenght !==0;
           fetchAdd(data);
-          notify();
-          
+          notify(); 
       event.target.reset();
       }
 

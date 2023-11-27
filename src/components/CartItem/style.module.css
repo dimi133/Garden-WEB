@@ -78,6 +78,7 @@
 .icon{
     height: 20px;
     width: 22px;
+    cursor: pointer;
 }
 
 @media(max-width: 768px){

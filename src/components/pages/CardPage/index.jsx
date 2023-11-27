@@ -46,6 +46,9 @@ export default function CardPage() {
           Back to the store<TfiArrowCircleRight />
         </NavLink>
       </div>
+      {cart.length > 0 
+        ? <button className={s.clear} onClick={() => dispatch(clear())}>Clear Cart</button>
+        : ''}
 
       <div className={s.cart}>
         <div className={s.leftPart}>
@@ -55,7 +58,6 @@ export default function CardPage() {
                   ? <img src="/media/empty-cart.png" alt="Your cart is empty" />
                   : cart.map((item) => (<CartItem key={item.id} {...item} />))
                 }
-                <button className={s.clear} onClick={() => dispatch(clear())}>Clear Cart</button>
               </div>
         </div>
        

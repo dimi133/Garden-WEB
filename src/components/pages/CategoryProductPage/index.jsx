@@ -23,17 +23,28 @@ export default function CategoryProductPage() {
 
   return (
     <Container>
-        <h2>{category ? category.title : 'Not found'}</h2>
+        
         <ProductsFilters showCheckbox={true}/>
+        <Link to='#' onClick={() => navigate(-1)} className={s.navigate}>
+          <RiArrowGoBackFill />  Back
+        </Link>
+        {category 
+          ? <h2>{category.title} </h2>
+          : [<h2>'Not found'</h2>,
+          <img src="/media/oops.png" alt="OOPS"/>
+      
+      ]}
+        
         <div className={s.item}>
-            {
-              result.map(item => <ProductItem key={item.id} {...item} />)
+            { 
+              
+              result
+                .filter(({show}) => Object.values(show).every(elem => elem))
+                .map(item => <ProductItem key={item.id} {...item} />)
             }
         </div>
         <div className={s.button}>
-          <Link to='#' onClick={() => navigate(-1)} className={s.navigate}>
-            <RiArrowGoBackFill />  Back
-          </Link>
+          
         </div>
         <ScrollButton />
     </Container>

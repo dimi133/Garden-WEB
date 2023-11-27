@@ -14,7 +14,7 @@ export default function SingleProductItem({id,title, price, discont_price, image
   
     const notify = () => toast.success("Your product in cart >>>" , {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -22,9 +22,14 @@ export default function SingleProductItem({id,title, price, discont_price, image
         progress: undefined,
         theme: "colored",
         });
-  
+        
       const dispatch = useDispatch();
       const URLIMAGE = "http://localhost:3333/";
+
+      const addToCart = () => {
+        dispatch(add(id));
+        notify();
+        };
 
       const dicountPerc = Math.round((1 - discont_price / price) * 100);
       
@@ -53,7 +58,8 @@ export default function SingleProductItem({id,title, price, discont_price, image
                         }
                     </div>
                     <div className={s.btn}>
-                        <button onClick={()=>{dispatch(add(id)); notify();}} >Add to cart</button>
+                        {/* <button onClick={()=>{dispatch(add(id)); notify();}} >Add to cart</button> */}
+                        <button onClick={addToCart} >Add to cart</button>
                     </div>
                     <div className={s.descp}>
                         <p className={s.p1}>Description</p>

@@ -55,9 +55,15 @@
     border: 2px solid #339933;
     border-radius: 17px;
     padding: 10px 30px;
+    margin-top: 20px;
+    margin-left: 20px;
     color: white;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
+}
+.clear:hover{
+    scale: 1.2;
 }
 
 @media(max-width: 900px){
@@ -76,7 +82,7 @@
         flex-direction: column;
     } */
     .rightPart{
-        width: 360px;
+        max-width: 360px;
         height: 390px;
     }
     .cartHeader p{
