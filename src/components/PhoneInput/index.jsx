@@ -43,13 +43,14 @@ const notify = () => toast.success("Order complited >>>" , {
 
 const submit = (event) => {
     event.preventDefault();
-    const {phone} = event.target;
+    // const {phone} = event.target;
+    const phoneNumberValue = event.target.phone.value;
     // if (phone.value.length === 0) {
     //   alert('Please, enter a phone number');
     //   return;
     // }
     const phoneNumber = /^\+49 \d{2} \d{3} \d{3} \d{2}$/;
-    if (!phoneNumber.test(phone.value)) {
+    if (!phoneNumber.test(phoneNumberValue)) {
       toast.error("Error! Please, enter a valid phone number!", {
         position: "top-center",
         autoClose: 2000,
@@ -76,7 +77,7 @@ const submit = (event) => {
       return; 
     }
     const data = {
-      phone: phone.value,
+      phone: phoneNumberValue
     };
     console.log(data)
         fetchAdd(data);
@@ -93,7 +94,8 @@ const submit = (event) => {
             maskChar=" " 
             placeholder='Phone number' 
             name='phone'
-            defaultValue={phone}
+            // defaultValue={phone}
+            value={phone}
             onChange={(event) => setPhone(event.target.value)}/>
               {/* {(inputProps)=>(<input {...inputProps} name='phone'/>)} */}
           {/* </InputMask> */}

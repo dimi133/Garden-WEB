@@ -32,7 +32,7 @@ export default function AllSaleList() {
         {
         product
           .filter(({show}) => Object.values(show).every(elem => elem))
-          .filter(item => item.discont_price)
+          // .filter(item => item.discont_price)
           .length > 0 
           ? product
               .filter(({show}) => Object.values(show).every(elem => elem))
